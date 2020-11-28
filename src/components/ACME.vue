@@ -20,6 +20,7 @@
         <svg v-on:click="close_modal" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
           <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
         </svg>
+        <p>Withdrawal Amount</p>
         <input class="withdrawalamount" type="number" placeholder="ZAR 00.00" v-model="withdrawalamount" autofocus>
         <button class="submit" @click="submit">Submit</button>
       </div>
@@ -203,13 +204,14 @@ li {
   width: 400px;
   height: 200px;
   padding: 10px;
-  background: #c7c7c7;
+  background: #ffffff;
 }
 
 .acme .modal-box .content .withdrawalamount {
   text-align: center;
   border-style: none;
   border-radius: 5px;
+  background-color: #ececec;
   margin-bottom: 10px;
   padding: 5px;
   outline: none;
