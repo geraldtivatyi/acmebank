@@ -1,6 +1,7 @@
 # acmebank
 
 > simple bank app for acme
+> App runs on port 8085. If you will to run app on a different port, go into the index.js file in config and change the port value inside the dev block to your desired value
 
 ## Build Setup
 

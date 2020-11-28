@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="acme">
     <h2>Accounts List</h2>
     <div class="labels">
       <h3>Account Number</h3>
@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: 'hello',
+  name: 'acme',
   prop: ['index'],
   data () {
     return {
@@ -47,7 +47,7 @@ export default {
       for (var i = 0; i < this.$store.state.accounts.length; i++) {
         sum = sum + parseFloat(this.$store.state.accounts[i].balance)
       }
-      return sum
+      return sum.toFixed(2)
     }
   },
   methods: {
@@ -100,7 +100,7 @@ export default {
       this.$store.dispatch('updateBalance', {
         index: this.$route.params.index,
         accounttype: this.accounttype,
-        newbalance: this.newbalance
+        newbalance: this.newbalance.toFixed(2)
       })
       this.withdrawalamount = ''
       this.newbalance = ''
@@ -129,7 +129,7 @@ li {
   display: inline-block;
 }
 
-.hello {
+.acme {
   position: relative;
   padding: 0px;
   margin: 50px 100px 50px 100px;
@@ -180,7 +180,7 @@ li {
   border-width: thin;
 }
 
-.hello .modal-box {
+.acme .modal-box {
   position: absolute;
   left: 0;
   top: 0;
@@ -193,7 +193,7 @@ li {
   z-index: 1;
 }
 
-.hello .modal-box .content {
+.acme .modal-box .content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -206,7 +206,7 @@ li {
   background: #c7c7c7;
 }
 
-.hello .modal-box .content .withdrawalamount {
+.acme .modal-box .content .withdrawalamount {
   text-align: center;
   border-style: none;
   border-radius: 5px;
@@ -215,7 +215,7 @@ li {
   outline: none;
 }
 
-.hello .modal-box .content .submit {
+.acme .modal-box .content .submit {
   color: #ffffff;
   border-style: none;
   border-radius: 5px;
@@ -225,7 +225,7 @@ li {
   cursor: pointer;
 }
 
-.hello .modal-box .content svg {
+.acme .modal-box .content svg {
   position: absolute;
   right: 15px;
   top: 15px;
