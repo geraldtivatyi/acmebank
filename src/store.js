@@ -13,7 +13,7 @@ export default new Vuex.Store({
   },
   actions: {
     loadData (context) {
-      request('http://localhost:8086/api/accounts', 'get', null, function (r) {
+      request('http://localhost:8080/api/accounts', 'get', null, function (r) {
         let d = {}
         try {
           d = JSON.parse(r)
